@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import List from './ListResult';
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(0);
   const [secondNumber, setSecondNumber] = useState(0);
   const [result, setResult] = useState(0);
+  const [listResult, setListResult] = useState([]);
+  
+
+  useEffect(() => {
+    setListResult((prev) => [...prev, result])
+  }, [result]);
 
   return (
     <>
@@ -30,6 +37,10 @@ function App() {
       <section className="result">
         <label>Result</label>
         <input value={result} readOnly></input>
+      </section>
+      <section className="historic">
+        <label>Historic</label>
+        <List array={listResult}>{result}</List>
       </section>
     </>
   );

@@ -27,7 +27,7 @@ body{
 }
 
 .inputs{
-  margin-top: 5vh;
+  margin-top: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@ body{
 }
 
 .inputs input{
-  margin-bottom: 5vh;
+  margin-bottom: 4vh;
   height: 3vh;
 }
 
@@ -73,6 +73,15 @@ body{
   height: 4vh;
 }
 
+.historic{
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: crimson;
+  font-size: large;
+}
 
 
 
