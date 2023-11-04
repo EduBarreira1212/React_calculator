@@ -15,6 +15,10 @@
 
 body{
   background-color: #282c34;
+  background-image: linear-gradient(-45deg, rgb(127, 127, 249) 0%, rgb(66, 66, 173) 25%, rgb(35, 65, 106) 51%, #061f51 100%);
+  -webkit-animation: AnimateBG 20s ease infinite;
+  animation: AnimateBG 20s ease infinite;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -24,6 +28,7 @@ body{
   justify-content: baseline;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: sans-serif;
 }
 
 .inputs{
@@ -36,6 +41,7 @@ body{
 
 .inputs label{
   color: red;
+  font-size: large;
 }
 
 .inputs input{
@@ -51,9 +57,12 @@ body{
   gap: 3vw;
 }
 .buttons button{
+  background-color: white;
   height: 5vh;
   width: 5vw;
   font-size: large;
+  box-shadow: 0.5vw 0.5vh 1vw black;
+  cursor: pointer;
 }
 
 .result{
@@ -64,13 +73,14 @@ body{
   justify-content: center;
 }
 .result label{
-  color: green;
+  color: rgb(0, 255, 0);
   font-size: larger;
 }
 
 .result input{
   font-size: larger;
   height: 4vh;
+  cursor: not-allowed;
 }
 
 .historic{
@@ -79,7 +89,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: crimson;
+  color: yellow;
   font-size: large;
 }
 
@@ -98,3 +108,27 @@ body{
     transform: rotate(360deg);
   }
 }
+
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  }
+  
+  @keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  }
